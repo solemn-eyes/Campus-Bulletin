@@ -13,9 +13,19 @@
   <div class="container">
     <h2 id="welcomeMsg">Welcome, Student!</h2>
     <p>This is your campus bulletin homepage. You’ll see updates, announcements, and more here.</p>
+    <div id="redirectMsg" style="display:none; color: green; font-weight: bold;">Redirecting to main page...</div>
     <button id="logoutBtn">Logout</button>
   </div>
 
   <script src="home.js"></script>
+  <script>
+    // Show redirect message and redirect after 3 seconds
+    function showRedirectMessage() {
+      document.getElementById('redirectMsg').style.display = 'block';
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 3000);
+    }
+  </script>
 </body>
 </html>
