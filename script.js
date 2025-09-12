@@ -18,3 +18,11 @@ categories.forEach(cat => {
         });
     });
 });
+
+// Check if a student is logged in
+if (users[admissionNumber] && users[admissionNumber].password === password) {
+    // Save current user to localStorage
+    localStorage.setItem("currentUser", JSON.stringify(users[admissionNumber]));
+    // Redirect to home page
+    window.location.href = "home.html";
+}
