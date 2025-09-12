@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #006400, #00a86b);
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  width: 320px;
+  text-align: center;
+}
+
+.auth-container h1 {
+  margin-bottom: 20px;
+  color: #006400;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+form input:focus {
+  border: 1px solid #006400;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #006400;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #00a86b;
+}
+
+.switch {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.switch a {
+  color: #006400;
+  font-weight: bold;
+  text-decoration: none;
+}
+.switch a:hover {
+  text-decoration: underline;
+}
+
