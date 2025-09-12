@@ -1,0 +1,117 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #006400, #00a86b);
+  color: #333;
+  min-height: 100vh;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(0, 100, 0, 0.9);
+  color: white;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+nav h1 {
+  font-size: 1.4rem;
+}
+
+.nav-icons span {
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.nav-icons span:hover {
+  transform: scale(1.2);
+}
+
+
+aside {
+  width: 220px;
+  margin-top: 60px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  position: fixed;
+  height: 100vh;
+}
+
+aside h3 {
+  margin-bottom: 15px;
+  color: #006400;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside li {
+  margin: 12px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+aside li:hover {
+  background: #00a86b;
+  color: white;
+  transform: translateX(5px);
+}
+
+
+main {
+  margin-left: 240px;
+  margin-top: 70px;
+  padding: 20px;
+  flex: 1;
+}
+
+
+.announcement-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.announcement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.category {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.category.academics { background: #1e90ff; }
+.category.events { background: #ff9800; }
+.category.lost { background: #e91e63; }
+.category.general { background: #673ab7; }

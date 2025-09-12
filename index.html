@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Bulletin</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>📢 Campus Bulletin</h1>
+    <div class="nav-icons">
+      <span id="notif">🔔</span>
+      <span id="profile">👤</span>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside>
+    <ul>
+      <li data-category="all">🏡 All</li> 
+      <li data-category="academics">📘 Academics</li>
+      <li data-category="events">🎉 Clubs & Events</li>
+      <li data-category="lost">🛠️ Lost & Found</li>
+      <li data-category="general">📢 General Notices</li>
+    </ul>
+  </aside>
+
+  <!-- Main Feed -->
+  <main>
+    <div class="announcement-card" data-category="academics">
+      <h2>Exam Timetable Released</h2>
+      <span class="category academics">Academics</span>
+      <p>Year 2 timetable is now available on the portal.</p>
+      <small>Posted by Dr. Onyango · Sept 12</small>
+    </div>
+
+    <div class="announcement-card" data-category="events">
+      <h2>Computer Science Club Meetup</h2>
+      <span class="category events">Clubs & Events</span>
+      <p>Friday at 2pm, CS lab. All are welcome!</p>
+      <small>Posted by CS Club · Sept 10</small>
+    </div>
+    <div class="announcement-card" data-category="lost">
+        <h2>Lost Wallet</h2>
+        <span class="category lost">Lost & Found</span>
+        <p>A black wallet was found near the library. Claim at the office.</p>
+        <small>Posted by Student Union · Sept 8</small>
+    </div>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
