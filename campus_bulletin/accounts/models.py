@@ -23,6 +23,9 @@ class StudentManager(BaseUserManager):
 class Student(AbstractBaseUser):
     admission_number = models.CharField(max_length=50, unique=True)
     full_name = models.CharField(max_length=100)
+    course = models.CharField(max_length=100, blank=True, null=True)
+    year_of_study = models.IntegerField(blank=True, null=True)
+    school = models.CharField(max_length=100, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
@@ -32,6 +35,6 @@ class Student(AbstractBaseUser):
     REQUIRED_FIELDS = ['full_name']
 
     def __str__(self):
-        return self.full_name
+        return f"{self.admission_number} - {self.full_name}"
     
     
