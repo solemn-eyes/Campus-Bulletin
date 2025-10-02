@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import AbstractUser, BaseUserManager
 
 # Creating models for the Students Login/Signup
 
@@ -20,7 +20,7 @@ class StudentManager(BaseUserManager):
         student.save(using=self._db)
         return student
     
-class Student(AbstractBaseUser):
+class Student(AbstractUser):
     admission_number = models.CharField(max_length=50, unique=True)
     full_name = models.CharField(max_length=100)
     course = models.CharField(max_length=100, blank=True, null=True)
