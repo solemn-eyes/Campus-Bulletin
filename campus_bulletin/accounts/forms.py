@@ -10,7 +10,7 @@ class StudentCreationForm(forms.ModelForm):
 
     class Meta:
         model = Student
-        fields = ("admission_number", "full_name", "course", "year_of_study", "school")
+        fields = ("admission_number", "full_name", "course", "year_of_study", "faculty")
 
     # Password validation logic
     def clean_password2(self):
