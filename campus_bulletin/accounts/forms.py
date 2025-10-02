@@ -1,7 +1,7 @@
 # This is the Sign-up and Login form for Students
 
 from django import forms
-from django.contrib.auth.forms import ReadOnlyPasswordHashField
+from django.contrib.auth.forms import  UserCreationForm
 from .models import Student
 
 class StudentCreationForm(forms.ModelForm):
@@ -10,7 +10,7 @@ class StudentCreationForm(forms.ModelForm):
 
     class Meta:
         model = Student
-        fields = ("admission_number", "full_name")
+        fields = ("admission_number", "full_name", "course", "year_of_study", "faculty")
 
     # Password validation logic
     def clean_password2(self):
@@ -26,7 +26,20 @@ class StudentCreationForm(forms.ModelForm):
         if commit:
             student.save()
         return student
-    
+
+# Student login form    
 class StudentLoginForm(forms.Form):
     admission_number = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
+
+# Student signup form using UserCreationForm
+class StudentSignupForm(UserCreationForm):
+    class Meta:
+        model = Student
+        fields = ['admission_number', 'full_name', 'password1', 'password2' ]
+
+# Student profile update form
+class StudentProfileForm(forms.ModelForm):
+    class Meta:
+        model = Student
+        fields = ['course', 'year_of_study', 'faculty']
