@@ -1,7 +1,40 @@
-<h2>Student Login</h2>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
-<p>Don’t have an account? <a href="{% url 'student_signup' %}">Sign Up</a></p>
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Bulletin | Login</title>
+  <link rel="stylesheet" href="{% static 'auth.css' %}">
+</head>
+<body>
+  <div class="auth-container">
+    <h2 id="formTitle">Login</h2>
+    
+    <form method="POST" id="loginForm">
+        {% csrf_token %}
+
+    <label for="admission_number">Admission Number:</label>
+    {{ form.admission_number }}
+
+    <label for="password">Password:</label>
+    {{ form.password }}
+
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="{% url 'student_signup' %}">Sign Up here</a>.</p>
+   
+
+    <!--
+    <form id="loginForm">
+      <input type="text" id="admissionNumber" placeholder="Admission Number" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit" id="submitBtn">Login</button>
+      <p class="toggle-link" id="toggleForm">Don't have an account? <a href="/signup.html">Sign Up</a></p>
+    </form>
+    -->
+  </div>
+  <script src="{% static 'auth.js' %}"></script>
+</body>
+</html>
